@@ -28,7 +28,23 @@ def validar_float_positivo (mensaje):
         except ValueError:
             print("Error,debe ingresar un valor valido")
 
-#Funciones de calculo
+def calcular_total(noches,valor_noche):
+    return noches * valor_noche
+
+def calcular_categoria(total):
+    if total < 200000:
+        return "Económica"
+    elif total < 500000:
+        return "Estándar"
+    else:
+        return "premium"
+
+def buscar_posicion(codigo):
+    for i in range(len(reservas)):
+        if reservas[i][0] == codigo:
+            return i
+        return -1
+    
 
 
 
