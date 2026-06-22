@@ -120,6 +120,20 @@ reserva["total"])
 
 print("Reserva actualizada correctamente")
 
+def eliminar_reserva():
+print("\n====ELIMINIR RESERVA====")
+
+codigo = validar_texto("ingrese codigo:")
+
+posicion = buscar_posicion(codigo)
+if posicion == -1:
+print("Reserva no encontrada")
+else:
+reservas.pop(posicion)
+print("Reserva eliminada correctamente")
+
+
+
 
 
 
