@@ -180,10 +180,38 @@ def mostrar_estadisticas():
 
         print(f"\n Promedio de ingresos: ${promedio:,.2f}")
 
+def menu():
+    while True:
+        print("\n SISTEMA DE RESERVAS DE HOTEL")
+        print("=" * 40)
+        print("1. Registrar reserva")
+        print("2. Buscar reserva")
+        print("3. Actualizar reserva")
+        print("4. Eliminar reserva")
+        print("5. Mostrar reservas")
+        print("6. Mostrar estadísticas")
+        print("7. Salir")
 
+        opcion = input("Selecione una opcion: ")
+        if opcion == "1":
+            registrar_reserva()
+        elif opcion == "2":
+            buscar_reserva()
+        elif opcion == "3":
+            actualizar_reserva()
+        elif opcion == "4":
+            eliminar_reserva()
+        elif opcion == "5":
+            mostrar_reservas()
+        elif opcion == "6":
+            mostrar_estadisticas()
+        elif opcion == "7":
+            print("\nGracias por ulitizar el sistema de reservas de hotel. ¡Hasta luego!")
+            break
+        else:
+            print("Opcion no valida, por favor seleccione una opcion del menu.")
 
-
-
+main()
 
 
 
