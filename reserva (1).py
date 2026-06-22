@@ -133,6 +133,56 @@ reservas.pop(posicion)
 print("Reserva eliminada correctamente")
 
 
+def mostrar_reservas():
+
+print("\n=====LISTADO DE RESERVAS=====")
+
+if len(reservas) == 0:
+print("No hay reservas registradas")
+return
+
+for reserva in reservas:
+print("_" * 40)
+print("codigo:", reserva["codigo"])
+print("Nombre:", reserva["nombre"])
+print("Noches:",reserva["noches"])
+print("Valor noche:", f"${reserva["valor_noche"]:,.0f}")
+print("Total:", f"${reseerva["total"]:,.0f}")
+print("Categoria:", reserva["categoria"])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
