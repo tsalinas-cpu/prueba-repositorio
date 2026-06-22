@@ -41,6 +41,13 @@ def calcular_categoria(total):
     else:
         return "premium"
 
+def buscar_posicion(codigo):
+    for i in range(len(reservas)):
+        if reservas[i][0] == codigo:
+            return i
+        return -1
+    
+
 
 
 
