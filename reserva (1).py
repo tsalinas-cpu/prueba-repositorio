@@ -49,6 +49,30 @@ def buscar_posicion(codigo):
     
 
 
+def registrar_reserva():
+    print("\n====Registrar Reserva====")
 
+    codigo = validar_texto("Ingrese el código de la reserva: ")
 
-        
+    if buscar_posicion(codigo) != -1:
+        print("Error, el código ya existe.")
+        return
+    
+    nombre = validar_texto("Nombre huesped: ")
+    noches = validar_entero_positivo("Noches: ")
+    valor_noche = validar_float_positivo("Valor noche: ")
+    
+    total = calcular_total(noches, valor_noche)
+    categoria = calcular_categoria(total)
+
+    reserva = {
+        "codigo": codigo,
+        "nombre": nombre,
+        "noches": noches,
+        "valor_noche": valor_noche,
+        "total": total,
+        "categoria": categoria
+    }
+    reservas.append(reserva)
+
+    print("reserva registrada exitosamente.")
