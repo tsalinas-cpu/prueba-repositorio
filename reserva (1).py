@@ -74,5 +74,52 @@ def registrar_reserva():
         "categoria": categoria
     }
     reservas.append(reserva)
-
     print("reserva registrada exitosamente.")
+
+def buscar_reserva():
+    print("\n====BUSCAR RESERVA====")
+    codigo = validar_texto("Ingrese codigo:")
+    posicion = buscar_posicicon(codigo)
+
+if posicion == -1:
+    print("Reserva no encontrada")
+else:
+    reserva = reseervas [posicion]
+
+print(f"\nposicion: {posicion}")
+print(f"Codigo: {reserva["codigo"]}")
+print(f"Nombre: {reserva["nombre"]}")
+print(f"Noches: {reserva["noches"]}")
+print(f"Valor noche:${reserva["valor noche]:,.0f}")
+print(f"total: ${reserva["total"]:,.0f}")
+print(f"Categoria: {reserva["categoria"]}")
+
+
+def actualizar_reserva():
+print("\n====ACTUALIZAR RESERVA====")
+codigo = validar_texto("Ingrese codigo:")
+posicion = buscar_posicion(codigo)
+
+if posicion == -1:
+print("Reserva no encontrada")
+return
+
+reserva = reservas [posicion]
+print("Ingrese los datos nuevos:")
+
+reseerva["nombre"] = validar_texto("nombre:")
+reserva["noches"] = validar_entero_positivo("Cantidad de noches:")
+reserva["valor_noche"] = validar_float_positivo("Valor por noche:")
+
+reserva["total"] = calcular_total(
+reserva["noches"],
+reserva[valor_noche])
+
+reserva ["categoria"] = calcular_categoria(
+reserva["total"])
+
+print("Reserva actualizada correctamente")
+
+
+
+
