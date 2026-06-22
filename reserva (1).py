@@ -135,7 +135,7 @@ print("Reserva eliminada correctamente")
 
 def mostrar_reservas():
 
-print("\n=====LISTADO DE RESERVAS=====")
+ print("\n=====LISTADO DE RESERVAS=====")
 
 if len(reservas) == 0:
 print("No hay reservas registradas")
@@ -149,6 +149,37 @@ print("Noches:",reserva["noches"])
 print("Valor noche:", f"${reserva["valor_noche"]:,.0f}")
 print("Total:", f"${reseerva["total"]:,.0f}")
 print("Categoria:", reserva["categoria"])
+def mostrar_estadisticas():
+    print("\n====ESTADISTICAS DE RESERVAS====")
+
+    if len(reservas) == 0:
+        print("No hay reservas registradas")
+        return
+
+        cantidad = len(reservas)
+
+        ingresos_totales = 0
+
+        mayor_reserva in reservas[0]
+
+        for reserva in reservas:
+            ingresos_totales += reserva["total"]
+
+            if reserva["total"] > mayor_reserva["total"]:
+                mayor_reserva = reserva
+
+        promedio = ingresos_totales / cantidad
+
+        print(f"cantidad total de reservas: {cantidad}")
+        print(f"Ingresos totales: ${ingresos_totales:,.0f}")
+
+        print("\n Reserva de mayor valor:")
+        print(f"codigo: {mayor_reserva['codigo']}")
+        print(f"huesped: {mayor_reserva['nombre']}")
+        print(f"calcular_total: ${mayor_reserva['total']:,.0f}")
+
+        print(f"\n Promedio de ingresos: ${promedio:,.2f}")
+
 
 
 
